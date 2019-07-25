@@ -59,10 +59,10 @@ def run() :
 	# generate index for reference fasta
 	refIndex = runIndex(refFastaFilname = args.asm1Filename)
 	
-	# run minimap2 - loop over query sequences
+	
 	scaffoldMapList = runMapper(referenceIndex = refIndex, asm2Filename = args.asm2Filename, minQueryLen = args.minQueryLen)
 
-	#
+	
 	writeOutput(outputPrefix=args.outputPrefix,scaffoldMapListOut=lsscaffoldMapList)
 
 	print("DONE")
