@@ -37,7 +37,7 @@ def runIndex(refFastaFilname):
     return a
 
 
-def getTopHitByAlignmentLength(hitsList, queryID):
+def getTopHitByAlignmentLength(hitsList):
     "function getTopHitByAlignmentLength"
     dic = {}
     for i in hitsList:
@@ -71,7 +71,7 @@ def runMapper(referenceIndex, asm2Filename, minQueryLen):
             hits.append(name+"\t"+str(len(seq))+"\t" +
                         hit.ctg+"\t"+str(hit.mlen))
 
-        topAln = getTopHitByAlignmentLength(hits, name)
+        topAln = getTopHitByAlignmentLength(hits)
         print("Top hit: %s\n" % topAln['top_aln_id'])
         scaffoldMapList0.append({'queryID': name, 'qury_len': len(seq),
                                  'refID': topAln['top_aln_id'],
