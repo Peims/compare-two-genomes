@@ -75,7 +75,7 @@ def runMapper(referenceIndex, asm2Filename, minQueryLen):
         print("Top hit: %s\n" % topAln['top_aln_id'])
         scaffoldMapList0.append({'queryID': name, 'qury_len': len(seq),
                                  'refID': topAln['top_aln_id'],
-                                 'alignLen': topAln['top_aln_blen'],
+                                 'alignLen': topAln['top_aln_blen']
                                  })
     return (scaffoldMapList0)
 
