@@ -1,7 +1,7 @@
 import argparse
 import mappy as mp
 
-# Notes: gzip not supported with biopython SeqIO
+
 
 def parseArgs() :
 	parser = argparse.ArgumentParser(description='compare assemblies with minimap2')
