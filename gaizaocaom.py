@@ -66,14 +66,15 @@ def runMapper(referenceIndex, asm2Filename, minQueryLen):
                 len(seq), minQueryLen))
             continue
         hits = []
+        
         for hit in referenceIndex.map(seq):
 
             hits.append(name+"\t"+str(len(seq))+"\t" +
                         hit.ctg+"\t"+str(hit.mlen))
-
-        topAln = getTopHitByAlignmentLength(hits)
-        print("Top hit: %s\n" % topAln['top_aln_id'])
-        scaffoldMapList0.append({'queryID': name, 'qury_len': len(seq),
+        if hits:
+            topAln = getTopHitByAlignmentLength(hits)
+            print("Top hit: %s\n" % topAln['top_aln_id'])
+            scaffoldMapList0.append({'queryID': name, 'qury_len': len(seq),
                                  'refID': topAln['top_aln_id'],
                                  'alignLen': topAln['top_aln_blen']
                                  })
