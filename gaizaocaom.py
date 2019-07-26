@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 
-#created by Maosong Pei
+# -*- coding: utf-8 -*-
+"""
+Created on Thurs Jul 20 15:25:45 2019
+@author: Maosong Pei
+"""
 import mappy as mp
 
 
